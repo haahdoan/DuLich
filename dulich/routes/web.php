@@ -36,3 +36,14 @@ Route::post('dang-nhap', [
     'as'=>'dangnhap',
     'uses'=>'Auth\LoginController@postLogin'
 ]);
+
+//dangxuat
+Route::get('dang-xuat',function() {
+    Auth::logout();
+    return redirect('home');
+})->middleware("auth");
+
+//trangchu
+Route::get('home', function() {
+    return view('page.home');
+});

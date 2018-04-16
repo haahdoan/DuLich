@@ -58,7 +58,9 @@ class LoginController extends Controller
             'password.max' => 'Password of up to 10 characters!',
         ]);
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            dd('Logged in successfully!');
+            //dd('Logged in successfully!');
+            //return redirect('dang-nhap')->with('thanhcong','Logged in successfully!');
+            return redirect('home');
         }else {
             return redirect()->back()->with('thanhcong','The email or password is incorrect!');
         }
