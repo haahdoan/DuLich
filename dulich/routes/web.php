@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//dang ki
+Route::get('dang-ki', [
+    'as'=>'dangki',
+    'uses'=>'Auth\RegisterController@getSignin'
+]);
+
+Route::post('dang-ki', [
+    'as'=>'dangki',
+    'uses'=>'Auth\RegisterController@postSignin'
+]);
