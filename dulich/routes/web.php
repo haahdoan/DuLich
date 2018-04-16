@@ -25,3 +25,14 @@ Route::post('dang-ki', [
     'as'=>'dangki',
     'uses'=>'Auth\RegisterController@postSignin'
 ]);
+
+//dang nhap
+Route::get('dang-nhap', [
+    'as'=>'dangnhap',
+    'uses'=>'Auth\LoginController@getLogin'
+]);
+
+Route::post('dang-nhap', [
+    'as'=>'dangnhap',
+    'uses'=>'Auth\LoginController@postLogin'
+]);
