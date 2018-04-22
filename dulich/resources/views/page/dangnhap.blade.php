@@ -17,26 +17,25 @@
                             @endforeach
                         </div>
                     @endif
-                    @if(Session::has('thanhcong'))
-                        <div style="color: red">{{Session::get('thanhcong')}} </div>
+                    @if(Session::has('loi'))
+                        <div style="color: red">{{Session::get('loi')}} </div>
                     @endif
                     <table border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <td><p>Email:</p></td>
-                            <td><p><input type="text" name="email" placeholder="email" value="{{old('email')}}"></p></td>
+                            <td><p><input type="text" name="email" placeholder="Email" value="{{old('email')}}"></p></td>
                         </tr>
 
                         <tr>
                             <td><p>Password:</p></td>
-                            <td><p><input type="password" name="password" placeholder="password"></p></td>
+                            <td><p><input type="password" name="password" placeholder="Password"></p></td>
                         </tr>   
                         
                         <tr>
-                            <td colspan="2">
-                                <center>
+                            <td></td>
+                            <td>
                                     <input type="submit" value="Login" name="login">
                                     <input type="reset" value="Reset" name="reset">
-                                </center>
                             </td>
                         </tr>
                     </table>

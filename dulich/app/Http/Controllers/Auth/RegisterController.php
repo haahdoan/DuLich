@@ -76,6 +76,7 @@ class RegisterController extends Controller
         ]);
     }
 
+    //dang ki
     public function getSignin(){
         return view('page.dangki');
     }
@@ -106,7 +107,7 @@ class RegisterController extends Controller
         $user->email = $req->email;
         $user->password = Hash::make($req->password);
         $user->save();
-        return redirect(home)
+        return redirect('/home')
             ->with('thanhcong', 'Account sucessfully created!');
     }
 }

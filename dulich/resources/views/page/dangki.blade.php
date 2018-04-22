@@ -47,11 +47,10 @@
                         </tr>
                         
                         <tr>
-                            <td colspan="2">
-                                <center>
+                            <td></td>
+                            <td>
                                     <input type="submit" value="Sign in" name="signin">
                                     <input type="reset" value="Reset" name="reset">
-                                </center>
                             </td>
                         </tr>
                     </table>

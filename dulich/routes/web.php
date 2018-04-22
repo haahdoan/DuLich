@@ -47,3 +47,8 @@ Route::get('dang-xuat',function() {
 Route::get('home', function() {
     return view('page.home');
 });
+
+//hien thi thong tin nguoi dung
+Route::get('nguoidung', 'PagesController@getNguoidung');
+
+Route::post('nguoidung', 'PagesController@postNguoidung');

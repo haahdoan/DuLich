@@ -12,9 +12,6 @@
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Dulich</a>
-    </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
@@ -28,10 +25,11 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
     @if(Auth::user())
-        <li><a href="dang-xuat"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      <li><a href="nguoidung"><span class="glyphicon glyphicon-user"></span> <?php $user=Auth::user(); echo ($user->name); ?> </a></li>
+      <li><a href="dang-xuat"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     @else
-        <li><a href="dang-ki"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="dang-nhap"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="dang-ki"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="dang-nhap"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     @endif
     </ul>
   </div>
